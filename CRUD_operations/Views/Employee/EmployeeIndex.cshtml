@@ -1,0 +1,24 @@
+﻿@model CRUD_operations.Models.Employees
+
+<h2>Create Employee</h2>
+@using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+{
+	<div class="form-group">
+	<div>@Html.LabelFor(model=>model.Id,"EmployeeID")sample()</div>
+	 @Html.TextBoxFor(model=> model.Id)
+	 <div>@Html.LabelFor(model=>model.Name,"EmployeeName")</div>
+	 @Html.TextBoxFor(model=> model.Name)
+	 <div>@Html.LabelFor(model=>model.Designtation,"Designation")</div>
+	 @Html.TextBoxFor(model=> model.Designtation)
+	 <div>@Html.LabelFor(model=>model.CreatedDate,"Joining Date")</div>
+	 @Html.TextBoxFor(model=> model.CreatedDate)
+	</div>
+
+	<div>
+	<button type="submit">Save</button>
+    </div>
+}
+<script type="text/javascript">
+function sample()
+console.log("sample");
+</script>

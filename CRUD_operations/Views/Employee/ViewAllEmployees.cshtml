@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CRUD_operations.Models.Employees>
+
+<h2>View All Employees</h2>
+<table>
+	 <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Created Date</th>
+    </tr>
+@if (Model != null)
+{
+@foreach(var item in Model)
+{
+	<tr>
+		<td>@item.Id</td>
+	</tr>
+	<tr>
+		<td>@item.Name</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayFor(modelItem =>item.Designtation)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayFor(modelItem =>item.CreatedDate)</td>
+	</tr>
+	
+}
+}
+</table>
